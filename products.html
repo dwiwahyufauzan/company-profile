@@ -111,15 +111,35 @@
       </nav>
   
       <!-- Image gallery -->
-      <div class="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-16">
-        <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="hidden aspect-3/4 size-full rounded-lg object-cover lg:block">
-        <div class="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
-          <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-tertiary-product-shot-01.jpg" alt="Model wearing plain black basic tee." class="aspect-3/2 size-full rounded-lg object-cover">
-          <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-tertiary-product-shot-02.jpg" alt="Model wearing plain gray basic tee." class="aspect-3/2 size-full rounded-lg object-cover">
+      <div class="mx-auto mt-6 max-w-2xl px-4 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-16 space-y-4 lg:space-y-0">
+
+        <!-- Gambar kiri - hanya tampil di desktop -->
+        <div class="hidden lg:block">
+          <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-secondary-product-shot.jpg"
+            alt="Two each of gray, white, and black shirts laying flat."
+            class="aspect-[3/4] w-full max-w-sm mx-auto rounded-lg object-cover">
         </div>
-        <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-featured-product-shot.jpg" alt="Model wearing plain white basic tee." class="aspect-4/5 size-full object-cover sm:rounded-lg lg:aspect-3/4">
+      
+        <!-- Gambar tengah (dua vertikal) - tampil stacked di mobile -->
+        <div class="grid grid-cols-1 gap-y-4">
+          <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-tertiary-product-shot-01.jpg"
+            alt="Model wearing plain black basic tee."
+            class="aspect-[3/2] w-full max-w-sm mx-auto rounded-lg object-cover">
+          <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-tertiary-product-shot-02.jpg"
+            alt="Model wearing plain gray basic tee."
+            class="aspect-[3/2] w-full max-w-sm mx-auto rounded-lg object-cover">
+        </div>
+      
+        <!-- Gambar kanan (utama) - tetap tampil -->
+        <div>
+          <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-featured-product-shot.jpg"
+            alt="Model wearing plain white basic tee."
+            class="aspect-[4/5] w-full max-w-sm mx-auto rounded-lg object-cover lg:aspect-[3/4]">
+        </div>
+
       </div>
-  
+      
+      
       <!-- Product info -->
       <div class="mx-auto max-w-2xl px-4 pt-10 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto_auto_1fr] lg:gap-x-8 lg:px-16 lg:pt-16">
         <div class="lg:col-span-2 lg:pr-8">
@@ -160,7 +180,8 @@
       <!-- Related products -->
       <section aria-labelledby="related-products-heading" class="bg-white">
         <div class="mx-auto max-w-2xl px-16 py-24 sm:px-16 lg:max-w-7xl lg:px-16">
-          <h2 id="related-products-heading" class="text-2xl font-bold tracking-tight text-gray-900 text-center">Product</h2>
+          <h2 id="related-products-heading" class="text-2xl font-bold tracking-tight text-gray-900 text-center">Related Products</h2>
+          <p class="mt-2 text-lg text-gray-400 text-center">Explore other products you may like. We offer a wide range of high-quality apparel for every occasion.</p>
           <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
             <div class="group relative">
               <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" alt="Front of men's Basic Tee in black." class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
@@ -225,12 +246,9 @@
             </div>
       </section>
     </main>
-  </div>
-  
+  </div>  
 <!--end products sections-->
 
-<!--pricing-->
-<!--end pricing-->
 
 <!--logo clouds-->
 <div class="bg-gray-900 py-24 sm:py-24 rounded-t-4xl">
