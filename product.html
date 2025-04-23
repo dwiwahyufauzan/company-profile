@@ -4,244 +4,288 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style type="text/tailwindcss">
-    </style>
+    <style type="text/tailwindcss"></style>
   </head>
-  <body>
-    
+  <body class="pt-20 bg-gray-100">
 <!--header-->
-<div class="bg-gray-900">
-  <header class="absolute inset-x-0 top-0 z-50">
-    <nav class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-16" aria-label="Global">
-      <div class="flex lg:flex-1">
-        <a href="index.html" class="-m-1.5 p-1.5">
-          <span class="sr-only">Your Company</span>
-          <img class="h-16 w-auto" src="assets/image/logo glint.png" alt="Your Company Logo">
-        </a>                 
-      </div>
-      <div class="hidden lg:flex lg:gap-x-12">
-        <a href="index.html" class="text-sm/6 font-semibold text-white">Home</a>
-        
-        <!-- Services Dropdown (Desktop) -->
-        <div class="relative group">
-          <a href="product.html" class="inline-flex items-center text-sm/6 font-semibold text-blue-400 px-2 cursor-pointer group-hover:text-indigo-300 transition">
-            Products
-            <svg class="ml-1 h-4 w-4 text-white group-hover:text-indigo-300" xmlns="http://www.w3.org/2000/svg" fill="none"
-              viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </a>
-          <div class="absolute left-0 mt-2 w-52 bg-white shadow-lg rounded-lg z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-in-out">
-            <ul class="py-2 text-sm text-gray-700">
-              <li><a href="tshirts.html" class="block px-4 py-2 hover:bg-gray-100">T-shirt</a></li>
-              <li><a href="jacket.html" class="block px-4 py-2 hover:bg-gray-100">Jacket</a></li>
-            </ul>
-          </div>
-        </div>
-        <!-- End Services Dropdown -->
-
-
-        <a href="features.html" class="text-sm/6 font-semibold text-white">Services</a>
-        <a href="blog.html" class="text-sm/6 font-semibold text-white">Blog</a>
-        <a href="contact-us.html" class="text-sm/6 font-semibold text-white">Contact Us</a>
-        <a href="company.html" class="text-sm/6 font-semibold text-white">Company</a>
-      </div>
-      <div class="flex lg:hidden">
-        <label for="menu-toggle" class="cursor-pointer p-2 text-white rounded-md z-50">
-          <span class="sr-only">Open main menu</span>
-          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-          </svg>
-        </label>
-      </div>
-    </nav>
-    <!-- Mobile menu, show/hide based on menu open state. -->
-    <input type="checkbox" id="menu-toggle" class="peer hidden" />
-    <div class="fixed inset-0 z-40 bg-black/50 peer-checked:block hidden transition-opacity duration-300"></div>
-    
-    <div class="fixed inset-y-0 right-0 z-50 w-64 max-w-full bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform translate-x-full peer-checked:translate-x-0 transition-transform duration-300 ease-in-out">
-      <div class="flex items-center gap-x-6">
-        <a href="index.html" class="-m-1.5 p-1.5">
-          <span class="sr-only">Your Company</span>
-          <img class="h-16 w-auto" src="assets/image/logo glint.png" alt="Your Company Logo">
-        </a>    
-        <label for="menu-toggle" class="ml-auto -m-2.5 rounded-md p-2.5 text-gray-700 cursor-pointer">
-          <span class="sr-only">Close menu</span>
-          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-          </svg>
-        </label>        
-      </div>
-      <div class="mt-6 flow-root">
-        <div class="-my-6 divide-y divide-gray-500/10">
-          <div class="space-y-2 py-6 relative">
-            <a href="index.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50">Home</a>
-          
-            <!-- Products Dropdown -->
-            <div class="relative">
-              <!-- Hidden checkbox for dropdown -->
-              <input type="checkbox" id="dropdown-toggle" class="peer hidden" />
-            
-              <!-- Link to Product Page -->
-              <div class="flex items-center -mx-3 rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50 justify-between">
-                <a href="product.html" class="flex-grow">Products</a>
-                
-                <!-- Toggle icon (dropdown) -->
-                <label for="dropdown-toggle" class="cursor-pointer">
-                  <svg class="h-4 w-4 text-gray-900 transition-transform peer-checked:rotate-180" xmlns="http://www.w3.org/2000/svg"
-                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                  </svg>
-                </label>
-              </div>
-            
-              <!-- Dropdown menu -->
-              <div
-                class="absolute left-0 z-50 mt-2 w-52 rounded-lg bg-white shadow-lg opacity-0 invisible peer-checked:visible peer-checked:opacity-100 transition-all duration-200 ease-in-out">
-                <ul class="py-2 text-sm text-gray-700">
-                  <li><a href="tshirts.html" class="block px-4 py-2 hover:bg-gray-100">T-Shirts</a></li>
-                  <li><a href="jacket.html" class="block px-4 py-2 hover:bg-gray-100">Jackets</a></li>
-                </ul>
-              </div>
-            </div>
-            
-          
-            <a href="features.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50">Services</a>
-            <a href="blog.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50">Blog</a>
-            <a href="contact-us.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50">Contact Us</a>
-            <a href="company.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50">Company</a>
-          </div>    
-        </div>
-      </div>
+<header class="absolute inset-x-0 top-0 z-50 bg-gray-900">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-16" aria-label="Global">
+    <div class="flex lg:flex-1">
+      <a href="index.html" class="-m-1.5 p-1.5">
+        <span class="sr-only">Your Company</span>
+        <img class="h-16 w-auto" src="assets/image/logo glint.png" alt="Your Company Logo">
+      </a>                 
     </div>
-  </header>
+    <div class="hidden lg:flex lg:gap-x-12">
+      <a href="index.html" class="text-sm/6 font-semibold text-white">Home</a>
+      
+      <!-- Services Dropdown (Desktop) -->
+      <div class="relative group">
+        <a href="product.html" class="inline-flex items-center text-sm/6 font-semibold text-blue-400 px-2 cursor-pointer group-hover:text-indigo-300 transition">
+          Products
+          <svg class="ml-1 h-4 w-4 text-white group-hover:text-indigo-300" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </a>
+        <div class="absolute left-0 mt-2 w-52 bg-white shadow-lg rounded-lg z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-in-out">
+          <ul class="py-2 text-sm text-gray-700">
+            <li><a href="tshirts.html" class="block px-4 py-2 hover:bg-gray-100">T-shirt</a></li>
+            <li><a href="jacket.html" class="block px-4 py-2 hover:bg-gray-100">Jacket</a></li>
+            <li><a href="kemeja.html" class="block px-4 py-2 hover:bg-gray-100">Shirt</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- End Services Dropdown -->
 
-  <div class="relative isolate overflow-hidden pt-6">
-    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2830&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply" alt="" class="absolute inset-0 -z-10 size-full object-cover">
+
+      <a href="features.html" class="text-sm/6 font-semibold text-white">Services</a>
+      <a href="blog.html" class="text-sm/6 font-semibold text-white">Blog</a>
+      <a href="contact-us.html" class="text-sm/6 font-semibold text-white">Contact Us</a>
+      <a href="company.html" class="text-sm/6 font-semibold text-white">Company</a>
+    </div>
+    <div class="flex lg:hidden">
+      <label for="menu-toggle" class="cursor-pointer p-2 text-white rounded-md z-50">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </label>
+    </div>
+  </nav>
+  <!-- Mobile menu, show/hide based on menu open state. -->
+  <input type="checkbox" id="menu-toggle" class="peer hidden" />
+  <div class="fixed inset-0 z-40 bg-black/50 peer-checked:block hidden transition-opacity duration-300"></div>
   
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-24">
-        <div class="hidden sm:mb-8 sm:flex sm:justify-center">
-          <div class="relative rounded-full px-3 py-1 text-sm/6 text-gray-400 ring-1 ring-white/10 hover:ring-white/20">
+  <div class="fixed inset-y-0 right-0 z-50 w-64 max-w-full bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform translate-x-full peer-checked:translate-x-0 transition-transform duration-300 ease-in-out">
+    <div class="flex items-center gap-x-6">
+      <a href="index.html" class="-m-1.5 p-1.5">
+        <span class="sr-only">Your Company</span>
+        <img class="h-16 w-auto" src="assets/image/logo glint.png" alt="Your Company Logo">
+      </a>    
+      <label for="menu-toggle" class="ml-auto -m-2.5 rounded-md p-2.5 text-gray-700 cursor-pointer">
+        <span class="sr-only">Close menu</span>
+        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+      </label>        
+    </div>
+    <div class="mt-6 flow-root">
+      <div class="-my-6 divide-y divide-gray-500/10">
+        <div class="space-y-2 py-6 relative">
+          <a href="index.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50">Home</a>
+        
+          <!-- Products Dropdown -->
+          <div class="relative">
+            <!-- Hidden checkbox for dropdown -->
+            <input type="checkbox" id="dropdown-toggle" class="peer hidden" />
+          
+            <!-- Link to Product Page -->
+            <div class="flex items-center -mx-3 rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50 justify-between">
+              <a href="product.html" class="flex-grow">Products</a>
+              
+              <!-- Toggle icon (dropdown) -->
+              <label for="dropdown-toggle" class="cursor-pointer">
+                <svg class="h-4 w-4 text-gray-900 transition-transform peer-checked:rotate-180" xmlns="http://www.w3.org/2000/svg"
+                  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </label>
+            </div>
+          
+            <!-- Dropdown menu -->
+            <div
+              class="absolute left-0 z-50 mt-2 w-52 rounded-lg bg-white shadow-lg opacity-0 invisible peer-checked:visible peer-checked:opacity-100 transition-all duration-200 ease-in-out">
+              <ul class="py-2 text-sm text-gray-700">
+                <li><a href="tshirts.html" class="block px-4 py-2 hover:bg-gray-100">T-Shirt</a></li>
+                <li><a href="jacket.html" class="block px-4 py-2 hover:bg-gray-100">Jacket</a></li>
+                <li><a href="kemeja.html" class="block px-4 py-2 hover:bg-gray-100">Shirt</a></li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div class="text-center">
-          <h1 class="text-5xl font-semibold tracking-tight text-balance text-white sm:text-7xl">
-            Produk Glam Stitch: Pilihan Terbaik untuk Gaya Anda
-          </h1>
-          <p class="mt-8 text-lg font-medium text-pretty text-gray-400 sm:text-xl/8">
-            Kami menyediakan produk fashion berkualitas tinggi untuk memenuhi gaya hidup Anda — dengan desain elegan, kenyamanan maksimal, dan harga yang bersaing.
-          </p>
-          <div class="mt-10 flex items-center justify-center gap-x-6">
-            <a href="#" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">Mulai Belanja</a>
-            <a href="#" class="text-sm/6 font-semibold text-white">Jelajahi Koleksi <span aria-hidden="true">→</span></a>
-          </div>
-        </div>
+          
+        
+          <a href="features.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50">Services</a>
+          <a href="blog.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50">Blog</a>
+          <a href="contact-us.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50">Contact Us</a>
+          <a href="company.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50">Company</a>
+        </div>    
       </div>
     </div>
-</div>
-
+  </div>
+</header>
 <!--end header-->
 
-<!--products sections-->
-<div class="bg-white" id="produk">
-  <main class="pt-10 sm:pt-8">
-    <!-- Info Produk Utama -->
-    <div class="mx-auto max-w-2xl px-4 pt-10 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-16 lg:pt-16">
-      <div class="lg:col-span-2 lg:pr-8">
-        <h1 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">Jaket Glam Stitch</h1>
+<!--hero sections-->
+<!-- Hero Section -->
+<div class="relative bg-white py-16 sm:py-20">
+  <div class="mx-auto max-w-3xl px-6 lg:px-8 text-center">
+    <h2 class="text-4xl font-extrabold text-gray-900 sm:text-5xl">
+      Selamat Datang di Konveksi <span class="text-indigo-600">Glam Stitch</span>
+    </h2>
+    <p class="mt-4 text-lg leading-7 text-gray-700">
+      Kami memproduksi kaos polos, jaket custom, dan kemeja berkualitas tinggi untuk brand, komunitas, maupun kebutuhan usaha Anda. Desain stylish, jahitan rapi, hasil maksimal.
+    </p>
+    <div class="mt-8 flex flex-col sm:flex-row justify-center gap-3">
+      <a href="features.html" class="inline-block rounded-md bg-indigo-600 px-6 py-3 text-sm font-semibold text-white shadow-md hover:bg-indigo-500 transition">
+        Layanan Kami
+      </a>
+      <a href="company.html" class="inline-block rounded-md border border-gray-300 px-6 py-3 text-sm font-semibold text-gray-700 hover:bg-gray-100 transition">
+        Tentang Kami
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Product Section -->
+<div class="bg-white py-16">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-16">
+    <div class="text-center mb-12">
+      <p class="text-2xl font-extrabold tracking-tight text-gray-900">Koleksi Andalan Kami</p>
+      <p class="mt-3 text-base text-gray-600">Temukan pilihan fashion terbaik dari kami, dibuat dengan kualitas tinggi dan sentuhan desain yang stylish.</p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Kaos Polos -->
+      <div class="flex flex-col items-center text-center space-y-6">
+        <a href="tshirts.html" class="block w-full max-w-xs mx-auto">
+          <div class="overflow-hidden rounded-xl shadow-md transition-all duration-300 ease-in-out transform hover:scale-105">
+            <img 
+              src="https://media.istockphoto.com/id/185941321/id/foto/tubuh-bagian-atas-pria.jpg?s=612x612&w=0&k=20&c=iS9nQtGYKbNusFB7N6ygJZPdkmSvK1OwkhinmalwW3o=" 
+              alt="Kaos Polos Glam Stitch" 
+              class="w-full aspect-[1/1] object-cover"
+            >
+          </div>
+        </a>        
+        <h3 class="text-lg font-semibold text-gray-900">Kaos Polos</h3>
+        <p class="text-gray-600 px-4 text-sm max-w-xs">Nyaman dipakai seharian, hadir dalam berbagai warna dan bahan premium yang adem dan awet.</p>
+      </div>
+      
+
+      <!-- Jaket -->
+      <div class="flex flex-col items-center text-center space-y-6">
+        <a href="jacket.html" class="block w-full max-w-xs mx-auto">
+          <div class="overflow-hidden rounded-xl shadow-md transition-all duration-300 ease-in-out transform hover:scale-105">
+            <img 
+              src="https://media.istockphoto.com/id/1366594675/id/foto/pria-bersamju-hitam-menunjuk-tangan-hoodies-hitam-depan-terisolasi-mengejek-menyalin-ruang.jpg?s=612x612&w=0&k=20&c=ICCDcVEoo3kF7VLQrtxDgNUC_4jo4PxSfM3sLbCMV6E=" 
+              alt="Kaos Polos Glam Stitch" 
+              class="w-full aspect-[1/1] object-cover"
+            >
+          </div>
+        </a>        
+        <h3 class="text-lg font-semibold text-gray-900">Kaos Polos</h3>
+        <p class="text-gray-600 px-4 text-sm max-w-xs">Nyaman dipakai seharian, hadir dalam berbagai warna dan bahan premium yang adem dan awet.</p>
       </div>
 
-      <!-- Opsi -->
-      <div class="py-10 lg:col-span-2 lg:col-start-1 lg:pt-6 lg:pr-8 lg:pb-16">
-        <!-- Deskripsi -->
-        <div>
-          <h3 class="sr-only">Deskripsi</h3>
-          <div class="space-y-6">
-            <p class="text-base text-gray-900">
-              Jaket Glam Stitch hadir dengan desain simpel dan elegan, tersedia dalam pilihan warna menawan seperti Abu Heather, Hitam, dan Putih. Cocok untuk tampil stylish di segala suasana.
-            </p>
+      <!-- Kemeja -->
+      <div class="flex flex-col items-center text-center space-y-6">
+        <a href="kemeja.html" class="block w-full max-w-xs mx-auto">
+          <div class="overflow-hidden rounded-xl shadow-md transition-all duration-300 ease-in-out transform hover:scale-105">
+            <img 
+              src="https://img.freepik.com/free-photo/business-casual-shirt-white-closeup-outdoor-photoshoot_53876-119744.jpg?ga=GA1.1.1868222757.1738365469&w=740" 
+              alt="Kaos Polos Glam Stitch" 
+              class="w-full aspect-[1/1] object-cover"
+            >
+          </div>
+        </a>        
+        <h3 class="text-lg font-semibold text-gray-900">Kaos Polos</h3>
+        <p class="text-gray-600 px-4 text-sm max-w-xs">Nyaman dipakai seharian, hadir dalam berbagai warna dan bahan premium yang adem dan awet.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--end product sections-->
+
+<!-- ,reviews sections-->
+<section class="bg-gradient-to-b from-white via-gray-50 to-white py-24">
+  <div class="max-w-7xl mx-auto px-6 lg:px-16">
+    <div class="text-center">
+      <h2 class="text-4xl sm:text-2xl font-extrabold text-gray-900">Apa Kata Mereka?</h2>
+      <p class="mt-4 text-lg text-gray-600">Review dari para pelanggan setia kami.</p>
+    </div>
+
+    <div class="mt-16 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+      
+      <!-- Review Card -->
+      <div class="bg-white shadow-xl rounded-3xl p-8 border border-gray-100 hover:shadow-2xl transition-all duration-300">
+        <div class="flex items-center gap-4 mb-4">
+          <img class="w-12 h-12 rounded-full object-cover border-2 border-indigo-500" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Putri Aulia">
+          <div>
+            <h4 class="font-semibold text-gray-900 text-base">Putri Aulia</h4>
+            <span class="text-sm text-indigo-600 font-medium bg-indigo-50 rounded-full px-2 py-0.5">Kaos Polos</span>
           </div>
         </div>
-      </div>
-    </div>
 
-    <!-- Galeri Gambar -->
-    <div class="mx-auto mt-6 max-w-2xl px-4 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-16 space-y-4 lg:space-y-0">
-      <!-- Gambar kiri -->
-      <div class="hidden lg:block">
-        <img src="https://media.istockphoto.com/id/1383411717/id/foto/potret-pemuda-yang-ramah.jpg?s=612x612&w=0&k=20&c=v8oJf-Volmp1s_Rt6oSzZRsKIb5GznshSDSuAH4_Dmc=" alt="" class="aspect-[3/4] w-full max-w-sm mx-auto rounded-lg object-cover">
-      </div>
-      <!-- Tengah -->
-      <div class="grid grid-cols-1 gap-y-4">
-        <img src="https://media.istockphoto.com/id/1393264537/id/foto/model-mengenakan-hoodie-pria-kulit-hitam-maket-untuk-desain-anda-sendiri.jpg?s=612x612&w=0&k=20&c=8gN8pachrbhpSFlX5VQxUDKQsvaYNk9hb69vPwr577w=" alt="" class="aspect-[3/2] w-full max-w-sm mx-auto rounded-lg object-cover">
-        <img src="https://media.istockphoto.com/id/1438595781/id/foto/wanita-muda-berkacamata-dan-hoodie-hitam.jpg?s=612x612&w=0&k=20&c=yGm0UL4DqOxXym5Payfd1d4uSwigr-qgOCY3mHEMlrk=" alt="" class="aspect-[3/2] w-full max-w-sm mx-auto rounded-lg object-cover">
-      </div>
-      <!-- Kanan -->
-      <div>
-        <img src="https://media.istockphoto.com/id/1366972069/id/foto/potret-pria-ceria-berkerudung-oranye.jpg?s=612x612&w=0&k=20&c=HjDQsGzANZ35dxYBk6VPK48ilGN4sXYPHA8Mwu0XRws=" alt="" class="aspect-[4/5] w-full max-w-sm mx-auto rounded-lg object-cover lg:aspect-[3/4]">
-      </div>
-    </div>
-    <section aria-labelledby="related-products-heading" class="bg-white">
-      <div class="mx-auto max-w-2xl px-16 py-24 sm:px-16 lg:max-w-7xl lg:px-16 text-center">
-        <a href="jacket.html" class="inline-block rounded-md bg-gray-900 px-6 py-3 text-white font-semibold text-lg hover:bg-gray-800 transition">
-          Lihat Produk
-        </a>
-      </div>
-    </section>
-    
-  </main>
-</div>
-<div class="bg-white" id="produk">
-  <main class="pt-10 sm:pt-8">
-    <!-- Info Produk Utama -->
-    <div class="mx-auto max-w-2xl px-4 pt-10 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-16 lg:pt-4">
-      <div class="lg:col-span-2 lg:pr-8">
-        <h1 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">Kaos Polos Glam Stitch</h1>
-      </div>
-
-      <!-- Opsi -->
-      <div class="py-10 lg:col-span-2 lg:col-start-1 lg:pt-6 lg:pr-8 lg:pb-16">
-        <!-- Deskripsi -->
-        <div>
-          <h3 class="sr-only">Deskripsi</h3>
-          <div class="space-y-6">
-            <p class="text-base text-gray-900">
-              Kaos Polos Glam Stitch hadir dengan desain simpel dan elegan, tersedia dalam pilihan warna menawan seperti Abu Heather, Hitam, dan Putih. Cocok untuk tampil stylish di segala suasana.
-            </p>            
+        <div class="flex items-center mb-3">
+          <!-- Stars -->
+          <div class="flex space-x-1 text-yellow-400">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.5 12.18.5 7.91l6.064-.88L10 2l3.436 5.03L19.5 7.91l-5 4.27 1.378 5.91z"/></svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.5 12.18.5 7.91l6.064-.88L10 2l3.436 5.03L19.5 7.91l-5 4.27 1.378 5.91z"/></svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.5 12.18.5 7.91l6.064-.88L10 2l3.436 5.03L19.5 7.91l-5 4.27 1.378 5.91z"/></svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.5 12.18.5 7.91l6.064-.88L10 2l3.436 5.03L19.5 7.91l-5 4.27 1.378 5.91z"/></svg>
+            <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.5 12.18.5 7.91l6.064-.88L10 2l3.436 5.03L19.5 7.91l-5 4.27 1.378 5.91z"/></svg>
           </div>
         </div>
+
+        <p class="text-gray-700 leading-relaxed text-sm">“Kaos polosnya super nyaman dipakai seharian. Bahannya adem, jahitannya rapi, dan warnanya nggak gampang pudar!”</p>
       </div>
+      <div class="bg-white shadow-xl rounded-3xl p-8 border border-gray-100 hover:shadow-2xl transition-all duration-300">
+        <div class="flex items-center gap-4 mb-4">
+          <img class="w-12 h-12 rounded-full object-cover border-2 border-indigo-500" src="https://media.istockphoto.com/id/483627817/id/foto/memamerkan-putih-mutiaranya.jpg?s=612x612&w=0&k=20&c=0dXbdlR-Ten2QPyJ7E6WtpRjGAwLFLbfWywDJ0RCs_E=" alt="Putri Aulia">
+          <div>
+            <h4 class="font-semibold text-gray-900 text-base">Arifki Pratama</h4>
+            <span class="text-sm text-indigo-600 font-medium bg-indigo-50 rounded-full px-2 py-0.5">Jaket</span>
+          </div>
+        </div>
+      
+        <div class="flex items-center mb-3">
+          <!-- Stars -->
+          <div class="flex space-x-1 text-yellow-400">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.5 12.18.5 7.91l6.064-.88L10 2l3.436 5.03L19.5 7.91l-5 4.27 1.378 5.91z"/></svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.5 12.18.5 7.91l6.064-.88L10 2l3.436 5.03L19.5 7.91l-5 4.27 1.378 5.91z"/></svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.5 12.18.5 7.91l6.064-.88L10 2l3.436 5.03L19.5 7.91l-5 4.27 1.378 5.91z"/></svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.5 12.18.5 7.91l6.064-.88L10 2l3.436 5.03L19.5 7.91l-5 4.27 1.378 5.91z"/></svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.5 12.18.5 7.91l6.064-.88L10 2l3.436 5.03L19.5 7.91l-5 4.27 1.378 5.91z"/></svg>
+          </div>
+        </div>
+      
+        <p class="text-gray-700 leading-relaxed text-sm">“Jaket dari Glam Stitch bener-bener keren! Bahannya tebal tapi tetap ringan, potongannya pas, dan sangat cocok buat gaya harian yang casual tapi tetap kece.”</p>
+      </div>
+      <div class="bg-white shadow-xl rounded-3xl p-8 border border-gray-100 hover:shadow-2xl transition-all duration-300">
+        <div class="flex items-center gap-4 mb-4">
+          <img class="w-12 h-12 rounded-full object-cover border-2 border-indigo-500" src="https://media.istockphoto.com/id/1325882419/id/foto/wanita-meniup-ciuman-udara-pada-latar-belakang-biru-muda.jpg?s=612x612&w=0&k=20&c=xBVLOjJkZ2AAPBMi-bPeYzDKTQLQq48z0xPpWb7rUVE=" alt="Putri Aulia">
+          <div>
+            <h4 class="font-semibold text-gray-900 text-base">Firda Aulia</h4>
+            <span class="text-sm text-indigo-600 font-medium bg-indigo-50 rounded-full px-2 py-0.5">Jaket</span>
+          </div>
+        </div>
+      
+        <div class="flex items-center mb-3">
+          <!-- Stars -->
+          <div class="flex space-x-1 text-yellow-400">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.5 12.18.5 7.91l6.064-.88L10 2l3.436 5.03L19.5 7.91l-5 4.27 1.378 5.91z"/></svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.5 12.18.5 7.91l6.064-.88L10 2l3.436 5.03L19.5 7.91l-5 4.27 1.378 5.91z"/></svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.5 12.18.5 7.91l6.064-.88L10 2l3.436 5.03L19.5 7.91l-5 4.27 1.378 5.91z"/></svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.5 12.18.5 7.91l6.064-.88L10 2l3.436 5.03L19.5 7.91l-5 4.27 1.378 5.91z"/></svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.5 12.18.5 7.91l6.064-.88L10 2l3.436 5.03L19.5 7.91l-5 4.27 1.378 5.91z"/></svg>
+          </div>
+        </div>
+      
+        <p class="text-gray-700 leading-relaxed text-sm">“Kemejanya elegan banget! Bahannya adem, jatuhnya bagus di badan, dan jahitannya rapi. Cocok banget buat acara formal maupun nongkrong santai.”</p>
+
+      </div>
+      
+
+      <!-- Tambah review lainnya di sini dengan struktur yang sama -->
+      <!-- Gunakan nama, foto, produk, dan teks ulasan yang berbeda agar beragam -->
+
     </div>
+  </div>
+</section>
 
-    <!-- Galeri Gambar -->
-    <div class="mx-auto mt-6 max-w-2xl px-4 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-16 space-y-4 lg:space-y-0">
-      <!-- Gambar kiri -->
-      <div class="hidden lg:block">
-        <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="" class="aspect-[3/4] w-full max-w-sm mx-auto rounded-lg object-cover">
-      </div>
-      <!-- Tengah -->
-      <div class="grid grid-cols-1 gap-y-4">
-        <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-tertiary-product-shot-01.jpg" alt="" class="aspect-[3/2] w-full max-w-sm mx-auto rounded-lg object-cover">
-        <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-tertiary-product-shot-02.jpg" alt="" class="aspect-[3/2] w-full max-w-sm mx-auto rounded-lg object-cover">
-      </div>
-      <!-- Kanan -->
-      <div>
-        <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-featured-product-shot.jpg" alt="" class="aspect-[4/5] w-full max-w-sm mx-auto rounded-lg object-cover lg:aspect-[3/4]">
-      </div>
-    </div>
-    <section aria-labelledby="related-products-heading" class="bg-white">
-      <div class="mx-auto max-w-2xl px-16 py-24 sm:px-16 lg:max-w-7xl lg:px-16 text-center">
-        <a href="tshirts.html" class="inline-block rounded-md bg-gray-900 px-6 py-3 text-white font-semibold text-lg hover:bg-gray-800 transition">
-          Lihat Produk
-        </a>
-      </div>
-    </section>
-  </main>
-</div>
-<!--end products sections-->
-
-
+<!--end reviews sections-->
 
 <!--logo clouds-->
 <div class="bg-gray-900 py-24 sm:py-24 rounded-t-4xl">
